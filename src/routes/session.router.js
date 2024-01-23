@@ -33,6 +33,9 @@ router.get(
         res.render("private", { user })
     }    
 )
+router.get("/private/create", async (req, res) => {
+    res.render("create", {})
+})
 
 router.get("/error", (req, res) =>{
     const error = req.query?.error ?? "Error on Server"
